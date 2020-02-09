@@ -1,0 +1,75 @@
+{% load staticfiles %}
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vaidya</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="{% static 'css/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'chat.css' %}">
+
+    <!-- jQuery library -->
+    <script type="text/javascript" src="{% static 'js/js/jquery-3.2.1.min.js' %}"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="{% static 'js/js/bootstrap.min.js' %}"></script>
+</head>
+
+<body>
+  
+    <div id="chat-body" class="panel panel-default">
+        <div class="panel-heading"><strong>Vaidya - Aapka Apna Doctor</strong></div>
+        <div id="msg-list-div" class="panel-body">
+            <ul id="msg-list" class="list-group">
+                <li class="text-left response list-group-item">Hi! How may I help you today?</li>
+                <script>
+                    var chatlist = document.getElementById('msg-list-div');
+                    chatlist.scrollTop = chatlist.scrollHeight;
+                </script>
+            </ul>
+        </div>
+        <form id="chat-form" method="post" action="/post/">
+        <div id="chat-bottom" class="input-group">
+            <input type="text" id="chat-msg" name="chat-msg" class="form-control"/>
+          <!-- voice input-->  <img onclick="startDictation()" src="//i.imgur.com/cHidSVu.gif" />
+            <span class="input-group-btn">
+                <input class="btn btn-danger" id="send" type="submit" value="Send"/>
+            </span>
+        </div>
+        </form>
+    </div>
+
+
+</body>
+<script>
+  function startDictation() {
+
+    if (window.hasOwnProperty('webkitSpeechRecognition')) {
+
+      var recognition = new webkitSpeechRecognition();
+
+      recognition.continuous = false;
+      recognition.interimResults = false;
+
+      recognition.lang = "en-US";
+      recognition.start();
+
+      recognition.onresult = function(e) {
+        document.getElementById('chat-msg').value
+                                 = e.results[0][0].transcript ;
+	        recognition.stop();
+
+      };
+
+      recognition.onerror = function(e) {
+        recognition.stop();
+      }
+
+    }
+  }
+</script>
+
+<!-- link it to the website--> <script src="{% static 'chat.js' %}"></script>
+</html>

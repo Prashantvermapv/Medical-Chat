@@ -1,0 +1,18 @@
+.panel-body {
+    overflow-y: scroll;
+    height: 85%;
+}
+
+.list-group-item {
+    margin-bottom: 15px;
+    border: 1px solid #fff;
+}
+
+.query {
+    background: beige;
+    text-align: -webkit-right;
+}
+
+.response {
+    background: aliceblue;
+    text-align: -webkit-left

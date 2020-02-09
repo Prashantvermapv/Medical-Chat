@@ -1,0 +1,695 @@
+<!DOCTYPE HTML>
+<!--
+	Road Trip by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>vaidya</title>
+		<meta charset="utf-8" />
+		{% load static %}
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <style type="text/css">
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 15; /* Sit on top */
+   /* Location of the box */
+right: 0;
+bottom: 0;
+  width: 30%; /* Full width */
+  height: 40%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+	width: 500px;
+height: 100%;
+/* position: absolute; */
+/* right: 0px; */
+/* display: block; */
+margin-left: auto;
+}
+
+
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+	margin: 0px;
+margin-left: auto;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+  	a
+{
+	color: black;
+
+}
+.under{
+	z-index: -1
+}
+
+.footerest {
+   position: fixed;
+   right:5%;
+   top:80%;
+
+
+
+   z-index: 10;
+}
+
+
+
+
+
+
+
+#overlay {
+background: rgba(0, 0, 0, .77);
+bottom: 0;
+left: 0;
+position: fixed;
+right: 0;
+top: 0;
+z-index: 100000000000000000000;
+
+}
+
+.grow:hover
+{
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+}
+
+#home_text {
+
+
+margin: 15% 15% 5% 35%;
+
+
+
+/*height: 40%;
+margin: 30% auto 0;
+width: 50%;*/
+}
+
+
+
+
+
+
+
+
+
+  </style>
+
+
+	</head>
+	<body>
+
+<div>
+
+
+
+	<div style="    position: fixed;
+    width: 100%;">
+
+
+
+
+			<nav class="  navies navbar-light imagesinheader" style="background-color: #f8f9faa8; height:150px"   >
+
+	             <div class="col-sm-2 col-md-2 col-lg-2  imagesinheader"> <img src="{% static 'image/1.png' %}" alt="..." class="imageinheader" style="background-color: transparent;width:110%"></div>
+
+
+                 									 <div class="col-sm-8 col-md-8 col-lg-8  imagesinheader">
+                  										 <div style="      overflow: hidden;
+																    overflow-x: hidden;
+																    overflow-y: hidden;  line-height: 0px;"><h1>VAIDYA</h1>
+																   <h4 style="color: #2125296e">By TECHDHRONAS</h4>
+  														 </div>
+  													 </div>
+                  				 <div class="col-sm-2 col-md-2 col-lg-2  imagesinheader"><img src="{% static 'image/3.png' %}" alt="..." class="
+                  				 		imageinheader" style="width: 80%">
+                  				 </div>
+			</nav>
+
+
+<header id=header >
+
+
+
+
+				      <nav class="navie navbar-expand-lg navbar-light  container-fluid" style="background-color: transparent; padding: none">
+
+											<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="
+												#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+										    		<span class="navbar-toggler-icon"></span>
+								 			 </button>
+
+								  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-family: 'PT Serif',
+								  				serif; font-size: 20px; height:100px">
+								   	 			<ul class="navbar-nav mr-auto">
+											      <li class="nav-item active">
+											        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+											      </li>
+											      <li class="nav-item">
+											        <a class="nav-link" href="#">Diagnose</a>
+											      </li>
+											      <li class="nav-item dropdown">
+											        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											          Treatment
+											        </a>
+											        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+											          <a class="dropdown-item" href="#">Ayurveda</a>
+											          <a class="dropdown-item" href="#">Yoga</a>
+											          <a class="dropdown-item" href="#">Naturopathy</a>
+											          <a class="dropdown-item" href="#">Unani</a>
+											           <a class="dropdown-item" href="#">Siddha</a>
+											          <a class="dropdown-item" href="#">Homeopathy</a>
+											          <a class="dropdown-item" href="#">Sowa-Rigpa</a></div></li>
+
+											          <li class="nav-item dropdown">
+											        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											          Routine
+											        </a>
+											        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+											          <a class="dropdown-item" href="#">Diet Plan</a>
+											          <a class="dropdown-item" href="#">Workout Plan</a>
+											          <a class="dropdown-item" href="#">Beauty and Wellness</a>
+											          <a class="dropdown-item" href="#">Get your Rutine</a>
+											           <a class="dropdown-item" href="#">Track your Routine</a>
+													</div></li>
+
+
+											      <li class="nav-item">
+											        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">RTI</a>
+											      </li>
+
+
+											      <li class="nav-item">
+											        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Citizen Corner</a>
+											      </li>
+
+
+											      <li class="nav-item">
+											        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">About us</a>
+											      </li>
+
+
+
+											      <li class="nav-item">
+											        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Contact us</a>
+											      </li>
+
+
+
+											     					 <li class="nav-item">
+															        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Services</a>
+															      		</li>
+
+
+								    			</ul>
+								    <form class="form-inline my-2 my-lg-0">
+								      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+								      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+								    </form>
+								  </div>
+                      </nav>
+
+															  <!--
+
+															                                <div class="row" style="padding:2px">
+															                                  <div class="col-sm-3 col-md-3 col-lg-3 a1">
+															                                    <img style="height:110px;
+																width:170px;     margin-left: 0px;margin-top: 12px;
+															    /* padding-left: 0px; */
+															    float: left;  " src="1.png"  class=" img-fluid a1" >
+
+															                                  </div>
+															                                  <div class="col-sm-4 col-md-4 col-lg-4 " style="align-self:left;" >
+															                                    <h1>VAIDYA</h1>
+															                                    <br>
+															                                    <h3>Ministry of AYUSH</h3>
+															                                  </div>
+															                                  <div class="col-sm-3 col-md-3 col-lg-3 a1">
+															                                  <img style="     margin-top: 17px;" src="3.png" class="img-fluid a1">
+															                                       </div> -->
+
+															    <a href="#menu"><span><h1>ayush</h1></span></a>
+
+			</header>
+
+
+</div>
+{% load static %}
+
+             <div class="footerest">
+  																	<button id="myBtn" class="grow" style="background-color: transparent;"><img src="{% static 'image/bot.gif' %}" style="height:280% ;weight:280%"></button>
+
+             														<div id="overlay">
+																	<div id="home_text">
+																		<a href="">
+																		<button  style="background-color: transparent; height: 35%;width: 45%"><img src="{% static 'image/bot123.gif' %}"></button>
+																	    <!-- your image -->
+																			</a>
+																	</div>
+																	</div>
+					<!-- Trigger/Open The Modal -->
+
+
+					<!-- The Modal -->
+				      <div id="myModal" class="modal">
+
+								  <!-- Modal content -->
+								 <div class="modal-content">
+										    <span class="close">&times;</span>
+										    <p>
+										    	<iframe
+												    allow="microphone;"
+												    width="350"
+												    height="430"
+												    src="{% url 'chatapp:new' %}">
+												</iframe>
+											</p>
+								  </div>
+					 </div>
+                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">H</a></li>
+					<li><a href="generic.html">Generic</a></li>
+					<li><a href="elements.html">Elements</a></li>
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+		<!--
+			Note: To show a background image, set the "data-bg" attribute below
+			to the full filename of your image. This is used in each section to set
+			the background image.
+		--><div class="under" style="position: relative;">
+			       <section id="banner" style="background-image: url({% static "image/images/banner.jpg" %});">
+											<div class="inner">
+												<header>
+													<h1>AYUSH</h1>
+												</header>
+											</div>
+				                  <a href="#one" class="more">Learn More</a>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="wrapper post bg-img"  style="background-image: url({% static "image/images/banner2.jpg" %}) ; z-index:100000000000">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>AYURVEDA</h2>
+						</header>
+						<div class="content">
+							<p>
+Life in Ayurveda is conceived as the union of body, senses, mind and soul. The living man is a conglomeration of three humors (Vata, Pitta &Kapha), seven basic tissues (Rasa, Rakta, Mansa, Meda, Asthi, Majja & Shukra) and the waste products of the body i.e. mala, mutra and sweda. Thus the total body matrix comprises of the humors, the tissues and the waste products of the body. The growth and decay of this body matrix and its constituents revolve around food which gets processed into humors, tissues and wastes. Ingestion, digestion, absorption, assimilation and metabolism of food have an interplay in health and disease which are significantly affected by psychological mechanisms as well as by bio- fire (Agni).</p>
+						</div>
+						<footer>
+							<a href="http://ayush.gov.in/about-the-systems/ayurveda/body-matrix" class="button alt">Learn More</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#two" class="more">Learn More</a>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper post bg-img" data-bg="{% static 'image/images/banner3.jpg' %}">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>YOGA</h2>
+						</header>
+						<div class="content">
+							<p>Yoga is one of the six systems of Vedic philosophy. Maharishi Patanjali, rightly called "The Father of Yoga" compiled and refined various aspects of Yoga systematically in his "Yoga Sutras" (aphorisms). He advocated the eight folds path of Yoga, popularly known as "Ashtanga Yoga" for all-round development of human beings. They are:- Yama, Niyama, Asana, Pranayama, Pratyahara, Dharana, Dhyana and Samadhi. These components advocate certain restraints and observances, physical discipline, breath regulations, restraining the sense organs, contemplation, meditation and samadhi. These steps are believed to have a potential for improvement of physical health by enhancing circulation of oxygenated blood in the body, retraining the sense organs thereby inducing tranquility and serenity of mind. The practice of Yoga prevents psychosomatic disorders and improves an individual’s resistance and ability to endure stressful situations.</p>
+						</div>
+						<footer>
+							<a href="http://ayush.gov.in/about-the-systems/yoga" class="button alt">Learn More</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#three" class="more">Learn More</a>
+			</section>
+
+		<!-- Three -->
+			<section id="three" class="wrapper post bg-img" data-bg="{% static 'image/images/banner4.jpg' %}">
+				<!-- <img src="{% static 'image/images/banner4.jpg'%}"> -->
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>NATUROPATHY</h2>
+						</header>
+						<div class="content">
+							<p>
+Naturopathy is an art and science of healthy living and a drugless system of healing based on well founded philosophy. It has its own concept of health and disease and also principle of treatment. Naturopathy is a very old science. We can find a number of references in our Vedas and other ancient texts. The morbid matter theory, concept of vital force and other concepts upon which Naturopathy is based are already available in old texts. The revival of Naturopathy started in India by translation of Germany’s Louis Kuhne’s book “New Science of Healing”. Shri D. Venkat Chelapati Sharma translated this book in Telgu language in 1894. Shri Shroti Kishan Swaroop of Bijnor translated this book into Hindi and Urdu languages in 1904. All this gave a wide propagation to this system.
+                            </p>
+						</div>
+						<footer>
+							<a href="http://ayush.gov.in/about-the-systems/naturopathy" class="button alt">Learn More</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#four" class="more">Learn More</a>
+			</section>
+
+
+<!-- Four -->
+
+<section id="four" class="wrapper post bg-img" data-bg="{% static 'image/images/banner5.jpg' %}">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>UNANI</h2>
+
+						</header>
+						<div class="content">
+							<p>The Unani System of Medicine has a long and impressive record in India. It was introduced in India by the Arabs and Persians sometime around the eleventh century. Today, India is one of the leading countries in so for as the practice of Unani medicine is concerned. It has the largest number of Unani educational, research and health care institutions.
+As the name indicates, Unani system originated in Greece. The foundation of Unani system was laid by Hippocrates. The system owes its present form to the Arabs who not only saved much of the Greek literature by rendering it into Arabic but also enriched the medicine of their day with their own contributions. In this process they made extensive use of the science of Physics, Chemistry, Botany, Anatomy, Physiology, Pathology, Therapeutics and Surgery.</p>
+						</div>
+						<footer>
+							<a href="http://ayush.gov.in/about-the-systems/unani" class="button alt">Learn More</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#five" class="more">Learn More</a>
+			</section>
+
+		<!--Five-->
+			<section id="five" class="wrapper post bg-img" data-bg="{% static 'image/images/banner6.jpg' %}">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>SIDDHA</h2>
+
+						</header>
+						<div class="content">
+							<p>Siddha system is one of the oldest systems of medicine in India . The term Siddha means achievements and Siddhars were saintly persons who achieved results in medicine. Eighteen Siddhars were said to have contributed towards the development of this medical system. Siddha literature is in Tamil and it is practised largely in Tamil speaking part of India and abroad. The Siddha System is largely therapeutic in nature.</p>
+						</div>
+						<footer>
+							<a href="http://ayush.gov.in/about-the-systems/siddha" class="button alt">Learn More</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#six" class="more">Learn More</a>
+			</section>
+
+          <!-- six -->
+
+              <section id="six" class="wrapper post bg-img" data-bg="{{'static/image/images/banner7.jpg' }}">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>HOMEOPATHY</h2>
+
+						</header>
+						<div class="content">
+							<p> Homoeopathy for their Health care needs is considered as the Second most popular system of medicine in the Country.
+It is more than a century and a half now that Homoeopathy is being practiced in India. It has blended so well into the roots and traditions of the country that it has been recognised as one of the National System of Medicine and plays a very important role in providing health care to a large number of people. Its strength lies in its evident effectiveness as it takes a holistic approach towards the sick individual through promotion of inner balance at mental, emotional, spiritual and physical levels.</p>
+						</div>
+						<footer>
+							<a href="http://ayush.gov.in/about-the-systems/homoeopathy" class="button alt">Learn More</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#seven" class="more">Learn More</a>
+			</section>
+
+					<!-- seven -->
+
+
+					<section id="seven" class="wrapper post bg-img" data-bg=url('static/image/images/banner8.jpg')>
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Sowa-Rigpa</h2>
+
+						</header>
+						<div class="content">
+							<p>
+“Sowa-Rigpa” commonly known as Tibetan system of medicine is one of the oldest, Living and well documented medical tradition of the world. It has been originated from Tibet and popularly practice in India, Nepal, Bhutan, Mongolia and Russia. The majority of theory and practice of Sowa-Rigpa is similar to “Ayurveda” . The first Ayurvedic influence came to Tibet during 3rd century AD but it became popular only after 7th centuries with the approach of Buddhism to Tibet. There after this trend of exportation of Indian medical literature, along with Buddhism and other Indian art and sciences were continued till early 19th century.</p>
+						</div>
+						<footer>
+							<a href="http://ayush.gov.in/about-the-systems/sowa-rigpa" class="button alt">Learn More</a>
+						</footer>
+					</article>
+				</div>
+
+			</section>
+
+
+		</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+
+
+
+					<!-- <form action="#" method="post">
+
+						<div class="field half first">
+							<label for="name">Name</label>
+							<input name="name" id="name" type="text" placeholder="Name">
+						</div>
+						<div class="field half">
+							<label for="email">Email</label>
+							<input name="email" id="email" type="email" placeholder="Email">
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+						</div>
+						<ul class="actions">
+							<li><input value="Send Message" class="button alt" type="submit"></li>
+						</ul>
+					</form> -->
+
+
+      <!-- Grid row -->
+      <div class="row mt-3 ">
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">VAIDYA</h6>
+
+          <p>
+            <a  href="#!">Home</a>
+          </p>
+          <p>
+            <a href="#!">About Us</a>
+          </p>
+          <p>
+            <a href="#!">Contact Us</a>
+          </p>
+          <p>
+            <a href="#!"></a>
+          </p>
+
+        </div>
+
+
+
+
+  <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">AYUSH</h6>
+
+          <p>
+            <a href="http://ayush.gov.in/">Home</a>
+          </p>
+          <p>
+            <a href="http://ayush.gov.in/about-us/about-the-ministry">About</a>
+          </p>
+          <p>
+            <a href="http://ayush.gov.in/meet-the-minister/sh-shripad-yesso-naik-independent-charges">Ministers</a>
+          </p>
+          <p>
+            <a href="http://ayush.gov.in/photogalleryview">Photo Gallery</a>
+          </p>
+           <p>
+            <a href="http://ayush.gov.in/photogalleryview">Webcast</a>
+          </p>
+
+        </div>
+
+
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold"></h6>
+
+        </div>
+        <!-- Grid column -->
+
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Social</h6>
+
+          <p>
+            <a href="">Facebook</a> </p>
+          <p>
+            <a href="">Twitter</a> </p>
+          <p>
+            <a href="">LinkedIn</a> </p>
+          <p>
+            <a href="">Youtube</a> </p>
+
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+
+
+
+
+			</footer>
+
+	</div>
+
+
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+											<script type="text/javascript">
+												$(document).ready(function() {
+        var overlay = $('#overlay');
+        overlay.on('click', function (e) {
+            overlay
+                .hide()
+                .off();
+        });
+    });
+											</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'assets/js/skel.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>

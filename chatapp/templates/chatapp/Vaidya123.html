@@ -1,0 +1,129 @@
+
+
+<html>
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vaidya</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/static/css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/chat.css">
+
+    <!-- jQuery library -->
+    <script type="text/javascript" src="/static/js/js/jquery-3.2.1.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="/static/js/js/bootstrap.min.js"></script>
+</head>
+<style>
+.chat_body{
+	background-color:white;
+	height:550px;
+	width:500px;
+	right:0;
+	bottom:0;
+	position:fixed;
+	}
+</style>
+<body>
+  <div class ="chat_body">
+<div class="container-fluid">
+			<div class="row" style="background-color:grey">
+				<div class="col-sm-3" >
+					<img src ="{% static 'image/bot123.gif' %}" height="100px" width="100px" >
+				</div>
+				<div class="col-sm-6">
+					<p>Vaidya aapka apna dr</p>
+				</div>
+			</div>
+		</div>
+        <div id="msg-list-div" class="panel-body">
+
+          <div id="msg-list" class="">
+                  <button class="text-left response list-group-item">Hi! How may I help you today?</button>
+        <!--    <ul id="msg-list" class="list-group">
+                <li class="text-left response list-group-item">Hi! How may I help you today?</li>-->
+
+                <script>
+                    var chatlist = document.getElementById('msg-list-div');
+                    chatlist.scrollTop = chatlist.scrollHeight;
+                </script>
+          <!--  </ul>-->
+        </div>
+
+
+		<div class="container-fluid">
+  <div class="row" style="position:fixed; bottom:120px;height:8px">
+    <h6 style="color:#a29c9c">Suggestions:<h6>
+    <div class="col-sm-3" style="background-color:white; font-size:10%;"><button type="button" class="btn btn-default" id="sugg1">hi</button></div>
+    <div class="col-sm-3" style="background-color:white;  font-size:10%;"><button type="button" class="btn btn-default" id="sugg2">Hello</button></div>
+    <div class="col-sm-3" style="background-color:white; font-size:10%;"><button type="button" class="btn btn-default" id="sugg3">Hey</button></div>
+
+    <div class="col-sm-3" style="background-color:white; font-size:10%;"><button type="button" class="btn btn-default" id="sugg4">Vaidya</button></div>
+  </div>
+</div>
+
+
+
+        <form id="chat-form" method="post" action="/post/">
+
+
+          <div class="container-fluid input-group" id="chat-bottom" style="width:100%s" >
+
+
+             <div class="row" style="position:fixed;bottom:0;background-color:white">
+              <div class="col-sm-2">
+                <img onclick="startDictation()" src="//i.imgur.com/cHidSVu.gif" />
+              </div>
+<div class="col-sm-7">
+			  <input type="text" id="chat-msg" name="chat-msg" class="form-control"/>
+
+              </div>
+              <div class="col-sm-3">
+                <span class="input-group-btn">
+                          <input class="btn btn-danger" id="send" type="submit" value="Send"/>
+                      </span>
+              </div>
+            </div>
+
+          </div>
+
+
+        </form>
+    </div>
+
+
+
+  </div>
+</body>
+<script>
+  function startDictation() {
+
+    if (window.hasOwnProperty('webkitSpeechRecognition')) {
+
+      var recognition = new webkitSpeechRecognition();
+
+      recognition.continuous = false;
+      recognition.interimResults = false;
+
+      recognition.lang = "en-US";
+      recognition.start();
+
+      recognition.onresult = function(e) {
+        document.getElementById('chat-msg').value
+                                 = e.results[0][0].transcript ;
+	        recognition.stop();
+
+      };
+
+      recognition.onerror = function(e) {
+        recognition.stop();
+      }
+
+    }
+  }
+</script>
+
+<!-- link it to the website--> <script src="/static/chat.js"></script>
+</html>

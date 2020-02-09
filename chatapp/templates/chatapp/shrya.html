@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="/static/shrey.css">
+    <title>Hello, world!</title>
+	<style>
+	.chat_body{
+	background-color:teal;
+	height:350px;
+	width:400px;
+	right:0;
+	bottom:0;
+	position:fixed;
+	}
+	
+	</style>
+  </head>
+  <body>
+	<div class ="chat_body">
+		<div class="container-fluid">
+			<div class="row" style="background-color:grey"> 
+				<div class="col-3 " style="background-color:green">
+					<p>chatbot icon</p>
+				</div>
+				<div class="col-9 ">
+					<p>Vaidya aapka apna dr</p>
+				</div>
+			</div>
+		</div>
+		
+		<div id="msg-list-div" class="panel-body">
+		
+		
+		<div id="msg-list" class="">
+                  <button class="text-left response list-group-item">Hi! How may I help you today?</button>
+        <!--    <ul id="msg-list" class="list-group">
+                <li class="text-left response list-group-item">Hi! How may I help you today?</li>-->
+              <a href="http://ayush.gov.in/about-the-systems/unani">
+                <button id="msg-list" class="list-group
+                "></button></a>
+                <script>
+                    var chatlist = document.getElementById('msg-list-div');
+                    chatlist.scrollTop = chatlist.scrollHeight;
+                </script>
+          <!--  </ul>-->
+        </div>
+		
+		
+		
+		<form id="chat-form" method="post" action="/post/">
+		
+		
+          <div class="container-fluid input-group" id="chat-bottom" style="width:100%" >
+		
+  <div class="row" style="position:fixed;bottom:0">
+    <div class="col-2 ">
+      
+                <img onclick="startDictation()" src="//i.imgur.com/cHidSVu.gif" />
+    </div>
+    <div class="col-8">
+	<input type="text" id="chat-msg" name="chat-msg" class="form-control"/>
+	</div>
+	  <div class="col-2">
+     <span class="input-group-btn">
+                          <input class="btn btn-danger" id="send" type="submit" value="Send"/>
+                      </span>
+    </div>
+    </div>
+  </div>
+  </form>
+</div>
+	</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+  <script>
+  function startDictation() {
+
+    if (window.hasOwnProperty('webkitSpeechRecognition')) {
+
+      var recognition = new webkitSpeechRecognition();
+
+      recognition.continuous = false;
+      recognition.interimResults = false;
+
+      recognition.lang = "en-US";
+      recognition.start();
+
+      recognition.onresult = function(e) {
+        document.getElementById('chat-msg').value
+                                 = e.results[0][0].transcript ;
+	        recognition.stop();
+
+      };
+
+      recognition.onerror = function(e) {
+        recognition.stop();
+      }
+
+    }
+  }
+</script>
+
+<!-- link it to the website--> <script src="/static/shrey.js"></script>
+</html>

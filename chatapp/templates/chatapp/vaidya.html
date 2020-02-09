@@ -1,0 +1,1374 @@
+<!DOCTYPE HTML>
+<!--
+  Road Trip by TEMPLATED
+  templated.co @templatedco
+  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+{% load staticfiles %}
+<html>
+  <head>
+    <title>vaidya</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+
+
+
+
+
+
+
+
+
+
+<!--bot css-->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="/static/css/css/bootstrap.min.css">
+<link rel="stylesheet" href="/static/chat.css">
+
+<!-- jQuery library -->
+<script type="text/javascript" src="/static/js/js/jquery-3.2.1.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="/static/js/js/bootstrap.min.js"></script>
+<!--bot css ends here-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+
+<style type="text/css">
+
+/*this is for sticky navbar*/
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+
+
+
+
+.footerest {
+   position: fixed;
+   right:5%;
+   top:80%;
+
+
+
+   z-index: 10;
+}
+
+
+
+
+
+
+
+#overlay {
+background: rgba(0, 0, 0, .77);
+bottom: 0;
+left: 0;
+position: fixed;
+right: 0;
+top: 0;
+z-index: 1000000000;
+
+}
+
+.grow:hover
+{
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+}
+
+#home_text {
+
+
+margin: 15% 15% 5% 35%;
+
+
+
+/*height: 40%;
+margin: 30% auto 0;
+width: 50%;*/
+}
+
+
+.cssforthemodal
+{
+position: fixed;
+background-color: white;display: none;
+   ; margin: 10%;
+    padding: 10%;
+    z-index: 1000000;
+    width: 80%;"
+
+}
+
+
+
+
+
+.chat_body{
+	background-color:white;
+	height:480px;
+	width:400px;
+	right:0;
+	bottom:0;
+	position:fixed;
+  z-index: 1000000000000000000000000000;
+  display: none;
+
+	}
+
+
+
+
+
+
+</style>
+<script>
+
+function openthebot() {
+  document.getElementById("chatbotspeak").style.display="block";
+
+  }
+}
+
+
+</script>
+
+
+
+
+  </head>
+  <body>
+
+
+
+
+    <div class ="chat_body" id="chatbotspeak" >
+    <div class="container-fluid">
+        <div class="row" style="background-color:grey">
+          <div class="col-sm-3" >
+            <img src ="drib_blink_bot" >
+          </div>
+          <div class="col-sm-3">
+            <p>Vaidya aapka apna dr</p>
+          </div>
+        </div>
+      </div>
+          <div id="msg-list-div" class="panel-body">
+
+            <div id="msg-list" class="">
+                    <button class="text-left response list-group-item">Hi! How may I help you today?</button>
+          <!--    <ul id="msg-list" class="list-group">
+                  <li class="text-left response list-group-item">Hi! How may I help you today?</li>-->
+
+                  <script>
+                      var chatlist = document.getElementById('msg-list-div');
+                      chatlist.scrollTop = chatlist.scrollHeight;
+                  </script>
+            <!--  </ul>-->
+          </div>
+
+
+      <div class="container-fluid">
+    <div class="row" style="position:fixed; bottom:65px;">
+      <div class="col-sm-3" style="background-color:white;"><button type="button" class="btn btn-default" id="sugg1">hi</button></div>
+      <div class="col-sm-3" style="background-color:white;"><button type="button" class="btn btn-default" id="sugg2">Hello</button></div>
+      <div class="col-sm-3" style="background-color:white;"><button type="button" class="btn btn-default" id="sugg3">Hey</button></div>
+
+      <div class="col-sm-3" style="background-color:white;"><button type="button" class="btn btn-default" id="sugg4">Vaidya</button></div>
+    </div>
+    </div>
+
+
+
+          <form id="chat-form" method="post" action="/post/">
+
+
+            <div class="container-fluid input-group" id="chat-bottom" style="width:100%s" >
+
+
+               <div class="row" style="position:fixed;bottom:0;background-color:white">
+                <div class="col-sm-2">
+                  <img onclick="startDictation()" src="//i.imgur.com/cHidSVu.gif" />
+                </div>
+    <div class="col-sm-7">
+          <input type="text" id="chat-msg" name="chat-msg" class="form-control"/>
+
+                </div>
+                <div class="col-sm-3">
+                  <span class="input-group-btn">
+                            <input class="btn btn-danger" id="send" type="submit" value="Send"/>
+                        </span>
+                </div>
+              </div>
+
+            </div>
+
+
+          </form>
+      </div>
+
+
+
+    </div>
+
+    <script>
+    function startDictation() {
+
+      if (window.hasOwnProperty('webkitSpeechRecognition')) {
+
+        var recognition = new webkitSpeechRecognition();
+
+        recognition.continuous = false;
+        recognition.interimResults = false;
+
+        recognition.lang = "en-US";
+        recognition.start();
+
+        recognition.onresult = function(e) {
+          document.getElementById('chat-msg').value
+                                   = e.results[0][0].transcript ;
+            recognition.stop();
+
+        };
+
+        recognition.onerror = function(e) {
+          recognition.stop();
+        }
+
+      }
+    }
+    </script>
+
+    <!-- link it to the website--> <script src="/static/chat.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="sufferingfromdisease" class="cssforthemodal"
+>
+
+<button id="closingsymptom" onclick="closedisease()">Close</button>
+</div>
+<script>
+function buttontoggle() {
+  var xdisease = document.getElementById("sufferingfromdisease");
+  if (xdisease.style.display === "none") {
+    xdisease.style.display = "block";
+  } else {
+    xdisease.style.display = "none";
+  }
+}
+
+function closedisease() {
+  var xdiseases = document.getElementById("sufferingfromdisease");
+  if (xdiseases.style.display === "none") {
+    xdiseases.style.display = "block";
+  } else {
+    xdiseases.style.display = "none";
+  }
+}
+
+
+
+
+
+
+</script>
+
+
+
+<!--here starts the header of the file that scrolls to disappear-->
+
+    <nav class="  navies navbar-light imagesinheader" style="background-color: #f8f9faa8"   >
+
+               <div class="col-sm-2 col-md-2 col-lg-2  imagesinheader"> <img src="{% static 'image/1.png' %}" alt="..." class="imageinheader" style="background-color: transparent;height:110%"></div>
+
+
+                                   <div class="col-sm-8 col-md-8 col-lg-8  imagesinheader">
+                                       <div style="      overflow: hidden;
+                                    overflow-x: hidden;
+                                    overflow-y: hidden;  line-height: 0px;"><h1>VAIDYA</h1>
+                                   <h4 style="color: #2125296e">Ministry of Ayush</h4>
+                               </div>
+                             </div>
+                           <div class="col-sm-2 col-md-2 col-lg-2  imagesinheader"><img src="{% static 'image/3.png' %}" alt="..." class="
+                              imageinheader" style="height: 80%">
+                           </div>
+      </nav>
+
+    <!-- Header --><div id="headers">
+      <header id="header" >
+
+               <!--  <nav class="navie navbar-expand-lg navbar-light  container-fluid" style="background-color: transparent; padding: none">
+
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="
+                        #navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                       </button>
+
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-family: 'PT Serif',
+                          serif; font-size: 18px">
+                          <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#one">Diagnose</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Treatment
+                              </a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Ayurveda</a>
+                                <a class="dropdown-item" href="F:\vaidya final\templated-roadtrip\ani\try.html">Yoga</a>
+                                <a class="dropdown-item" href="#">Naturopathy</a>
+                                <a class="dropdown-item" href="#">Unani</a>
+                                 <a class="dropdown-item" href="#">Siddha</a>
+                                <a class="dropdown-item" href="#">Homeopathy</a>
+                                <a class="dropdown-item" href="#">Sowa-Rigpa</a></div></li>
+
+                                <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Routine
+                              </a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Diet Plan</a>
+                                <a class="dropdown-item" href="#">Workout Plan</a>
+                                <a class="dropdown-item" href="#">Beauty and Wellness</a>
+                                <a class="dropdown-item" href="#">Get your Rutine</a>
+                                 <a class="dropdown-item" href="#">Track your Routine</a>
+                          </div></li>
+
+
+                            <li class="nav-item">
+                              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">RTI</a>
+                            </li>
+
+
+                            <li class="nav-item">
+                              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Citizen Corner</a>
+                            </li>
+
+
+                            <li class="nav-item">
+                              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">About us</a>
+                            </li>
+
+
+
+                            <li class="nav-item">
+                              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Contact us</a>
+                            </li>
+
+
+
+                                     <li class="nav-item">
+                                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Services</a>
+                                        </li>
+
+
+
+
+
+
+
+
+                                    <div  id="google_translate_element" style="width: 100px height:12px">
+                                     <li class="nav-item">
+                                      <a href="#" tabindex="-1" aria-disabled=></a>
+                                        </li>
+                                                                     </div>
+
+
+
+
+
+
+                                     <li class="nav-item" style="">
+                                     <a  href="#menu" tabindex="-1" aria-disabled="true"> <button id="ayushbutton" style="float: right; width: 180px ;     text-shadow: 0px 2px 3px #555;    border: none; " class="btn btn-outline-success my-2 my-sm-0" type="submit"><img src="ayushbutton.jpg" style="max-height: 150% ; max-width: 200% ; "><b style="color: #212529">Ministry of AYUSH</b></button></a>
+
+                                        </li>
+
+
+                          </ul>
+
+
+                  </div>
+                      </nav> -->
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#one">Diagnose</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Treatment<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Ayurveda</a></li>
+          <li><a href="#">Yoga</a></li>
+          <li><a href="#">Naturopathy</a></li>
+          <li><a href="#">Unani</a></li>
+          <li><a href="#">Siddha</a></li>
+          <li><a href="#">Homeopathy</li></a>
+          <li><a href="#">Sowa-Rigpa</li></a>
+        </ul>
+      </li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Routine<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Diet Plan</a></li>
+          <li><a href="#">Workout Plan</li></a>
+          <li><a href="#">Beauty and Wellness</li></a>
+          <li><a href="#">Get your Routine</li></a>
+          <li><a href="#">Track your Routine</li></a>
+        </ul>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+
+
+      </header>
+    </div>
+
+
+    <!-- Nav -->
+          <nav id="menu">
+        <ul class="links">
+          <li><a href="http://ayush.gov.in/about-the-systems">AYUSH Systems</a></li>
+          <li><a href="http://ayush.gov.in/drugs-and-pharmaceuticals">AYUSH Drugs</a></li>
+          <li><a href="http://ayush.gov.in/infrastructure">Infrastructure</a></li>
+          <li><a href="http://ayush.gov.in/acts-and-rules-notifications">Acts Rule Notification</a></li>
+          <li><a href="http://ayush.gov.in/education">Education</a></li>
+          <li><a href="http://ayush.gov.in/research">Research</a></li>
+          <li><a href="http://ayush.gov.in/schemes">Schemes</a></li>
+          <li><a href="http://ayush.gov.in/international-cooperation">International Cooperation</a></li>
+          <li><a href="http://ayush.gov.in/tenders-vacancies-and-announcements">Tender Vacancies</a></li>
+          <li><a href="http://ayush.gov.in/ebook">Ebook</a></li>
+
+        </ul>
+      </nav>
+
+    <!-- Banner -->
+    <!--
+      Note: To show a background image, set the "data-bg" attribute below
+      to the full filename of your image. This is used in each section to set
+      the background image.
+    -->
+      <section id="banner"    class="bg-img" data-bg="banner.jpg" style="width: 100%" >
+        <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel" style="height: 80% ;width: 80%">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-interval="1000">
+      <img src="10.jpeg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-interval="3000">
+      <div class="container" style="">
+
+    <div class="row">
+        <!--Start include wrapper-->
+        <div class="include-wrapper pb-5 col-12">
+            <!--SECTION START-->
+            <section class="row">
+                <!--Start slider news-->
+                <div class="col-12 col-md-6 pb-0 pb-md-3 pt-2 pr-md-1">
+                    <div id="featured" class="carousel slide carousel" data-ride="carousel">
+                        <!--slider navigate-->
+                        <ol class="carousel-indicators top-indicator">
+                            <li data-target="#featured" data-slide-to="0" class="active"></li>
+                            <li data-target="#featured" data-slide-to="1"></li>
+                            <li data-target="#featured" data-slide-to="2"></li>
+                            <li data-target="#featured" data-slide-to="3"></li>
+                        </ol>
+
+                        <!--carousel inner-->
+                        <div class="carousel-inner">
+                            <!--Item slider-->
+                            <div class="carousel-item active">
+                                <div class="card border-0 rounded-0 text-light overflow zoom">
+                                    <!--thumbnail-->
+                                    <div class="position-relative">
+                                        <!--thumbnail img-->
+                                        <div class="ratio_left-cover-1 image-wrapper">
+                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                                                <img class="img-fluid w-100"
+                                                     src="https://bootstrap.news/source/img1.jpg"
+                                                     alt="Image description">
+                                            </a>
+                                        </div>
+
+                                        <!--title-->
+                                        <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                                            <!--title and description-->
+                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                                                <h2 class="h3 post-title text-white my-1">Superstar calls for football clean up amid series of shocking allegations</h2>
+                                            </a>
+
+                                            <!-- meta title -->
+                                            <div class="news-meta">
+                                                <span class="news-author">by <a class="text-white font-weight-bold" href="../category/author.html">Jennifer</a></span>
+                                                <span class="news-date">Oct 22, 2019</span>
+                                            </div>
+                                        </div>
+                                        <!--end title-->
+                                    </div>
+                                    <!--end thumbnail-->
+                                </div>
+                            </div>
+
+                            <!--Item slider-->
+                            <div class="carousel-item">
+                                <div class="card border-0 rounded-0 text-light overflow zoom">
+                                    <!--thumbnail-->
+                                    <div class="position-relative">
+                                        <!--thumbnail img-->
+                                        <div class="ratio_left-cover-1 image-wrapper">
+                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                                                <img class="img-fluid w-100"
+                                                     src="https://bootstrap.news/source/img2.jpg"
+                                                     alt="Image description">
+                                            </a>
+                                        </div>
+
+                                        <!--title-->
+                                        <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                                            <!--title and description-->
+                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                                                <h2 class="h3 post-title text-white my-1">Walmart shares up 10% on online sales lift</h2>
+                                            </a>
+
+                                            <!-- meta title -->
+                                            <div class="news-meta">
+                                                <span class="news-author">by <a class="text-white font-weight-bold" href="../category/author.html">Jennifer</a></span>
+                                                <span class="news-date">Oct 22, 2019</span>
+                                            </div>
+                                        </div>
+                                        <!--end title-->
+                                    </div>
+                                    <!--end thumbnail-->
+                                </div>
+                            </div>
+
+                            <!--Item slider-->
+                            <div class="carousel-item">
+                                <div class="card border-0 rounded-0 text-light overflow zoom">
+                                    <!--thumbnail-->
+                                    <div class="position-relative">
+                                        <!--thumbnail img-->
+                                        <div class="ratio_left-cover-1 image-wrapper">
+                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                                                <img class="img-fluid w-100"
+                                                     src="https://bootstrap.news/source/img3.jpg"
+                                                     alt="Image description">
+                                            </a>
+                                        </div>
+
+                                        <!--title-->
+                                        <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                                            <!--title and description-->
+                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                                                <h2 class="h3 post-title text-white my-1">Bank chief warns on Brexit staff moves to other company</h2>
+                                            </a>
+
+                                            <!-- meta title -->
+                                            <div class="news-meta">
+                                                <span class="news-author">by <a class="text-white font-weight-bold" href="../category/author.html">Jennifer</a></span>
+                                                <span class="news-date">Oct 22, 2019</span>
+                                            </div>
+                                        </div>
+                                        <!--end title-->
+                                    </div>
+                                    <!--end thumbnail-->
+                                </div>
+                            </div>
+
+                            <!--Item slider-->
+                            <div class="carousel-item">
+                                <div class="card border-0 rounded-0 text-light overflow zoom">
+                                    <!--thumbnail-->
+                                    <div class="position-relative">
+                                        <!--thumbnail img-->
+                                        <div class="ratio_left-cover-1 image-wrapper">
+                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                                                <img class="img-fluid w-100"
+                                                     src="https://bootstrap.news/source/img4.jpg"
+                                                     alt="Image description">
+                                            </a>
+                                        </div>
+
+                                        <!--title-->
+                                        <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                                            <!--title and description-->
+                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                                                <h2 class="h3 post-title text-white my-1">The world's first floating farm making waves in Rotterdam</h2>
+                                            </a>
+
+                                            <!-- meta title -->
+                                            <div class="news-meta">
+                                                <span class="news-author">by <a class="text-white font-weight-bold" href="../category/author.html">Jennifer</a></span>
+                                                <span class="news-date">Oct 22, 2019</span>
+                                            </div>
+                                        </div>
+                                        <!--end title-->
+                                    </div>
+                                    <!--end thumbnail-->
+                                </div>
+                            </div>
+                            <!--end item slider-->
+                        </div>
+                        <!--end carousel inner-->
+                    </div>
+                    <!--navigation-->
+                    <a class="carousel-control-prev" href="#featured" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#featured" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <!--End slider news-->
+
+                <!--Start box news-->
+                <div class="col-12 col-md-6 pt-2 pl-md-1 mb-3 mb-lg-4">
+                    <div class="row">
+                        <!--news box-->
+                        <div class="col-6 pb-1 pt-0 pr-1">
+                            <div class="card border-0 rounded-0 text-white overflow zoom">
+                                <!--thumbnail-->
+                                <div class="position-relative">
+                                    <!--thumbnail img-->
+                                    <div class="ratio_right-cover-2 image-wrapper">
+                                        <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                                            <img class="img-fluid"
+                                                 src="https://bootstrap.news/source/img5.jpg"
+                                                 alt="Image description">
+                                        </a>
+                                    </div>
+
+                                    <!--title-->
+                                    <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                                        <!-- category -->
+                                        <a class="p-1 badge badge-primary rounded-0" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">Lifestyle</a>
+
+                                        <!--title and description-->
+                                        <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                                            <h2 class="h5 text-white my-1">Should you see the Fantastic Beasts sequel?</h2>
+                                        </a>
+                                    </div>
+                                    <!--end title-->
+                                </div>
+                                <!--end thumbnail-->
+                            </div>
+                        </div>
+
+                        <!--news box-->
+                        <div class="col-6 pb-1 pl-1 pt-0">
+                            <div class="card border-0 rounded-0 text-white overflow zoom">
+                                <!--thumbnail-->
+                                <div class="position-relative">
+                                    <!--thumbnail img-->
+                                    <div class="ratio_right-cover-2 image-wrapper">
+                                        <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                                            <img class="img-fluid"
+                                                 src="https://bootstrap.news/source/img6.jpg"
+                                                 alt="Image description">
+                                        </a>
+                                    </div>
+
+                                    <!--title-->
+                                    <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                                        <!-- category -->
+                                        <a class="p-1 badge badge-primary rounded-0" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">Motocross</a>
+
+                                        <!--title and description-->
+                                        <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                                            <h2 class="h5 text-white my-1">Three myths about Florida elections recount</h2>
+                                        </a>
+                                    </div>
+                                    <!--end title-->
+                                </div>
+                                <!--end thumbnail-->
+                            </div>
+                        </div>
+
+                        <!--news box-->
+                        <div class="col-6 pb-1 pr-1 pt-1">
+                            <div class="card border-0 rounded-0 text-white overflow zoom">
+                                <!--thumbnail-->
+                                <div class="position-relative">
+                                    <!--thumbnail img-->
+                                    <div class="ratio_right-cover-2 image-wrapper">
+                                        <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                                            <img class="img-fluid"
+                                                 src="https://bootstrap.news/source/img7.jpg"
+                                                 alt="Image description">
+                                        </a>
+                                    </div>
+
+                                    <!--title-->
+                                    <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                                        <!-- category -->
+                                        <a class="p-1 badge badge-primary rounded-0" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">Fitness</a>
+
+                                        <!--title and description-->
+                                        <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                                            <h2 class="h5 text-white my-1">Finding Empowerment in Two Wheels and a Helmet</h2>
+                                        </a>
+                                    </div>
+                                    <!--end title-->
+                                </div>
+                                <!--end thumbnail-->
+                            </div>
+                        </div>
+
+                        <!--news box-->
+                        <div class="col-6 pb-1 pl-1 pt-1">
+                            <div class="card border-0 rounded-0 text-white overflow zoom">
+                                <!--thumbnail-->
+                                <div class="position-relative">
+                                    <!--thumbnail img-->
+                                    <div class="ratio_right-cover-2 image-wrapper">
+                                        <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                                            <img class="img-fluid"
+                                                 src="https://bootstrap.news/source/img8.jpg"
+                                                 alt="Image description">
+                                        </a>
+                                    </div>
+
+                                    <!--title-->
+                                    <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                                        <!-- category -->
+                                        <a class="p-1 badge badge-primary rounded-0" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">Adventure</a>
+
+                                        <!--title and description-->
+                                        <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                                            <h2 class="h5 text-white my-1">Ditch receipts and four other tips to be a shopper</h2>
+                                        </a>
+                                    </div>
+                                    <!--end title-->
+                                </div>
+                                <!--end thumbnail-->
+                            </div>
+                        </div>
+                        <!--end news box-->
+                    </div>
+                </div>
+                <!--End box news-->
+            </section>
+            <!--END SECTION-->
+        </div>
+    </div>
+     </div>
+    </div>
+    <div class="carousel-item" data-interval="4000">
+      <img src="{% static '11.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+        <a href="#one" class="more">Learn More</a>
+      </section>
+
+    <!-- One -->
+      <section id="one" class="wrapper post bg-img" data-bg="banner2.jpg" >
+        <div class="inner" style="height: 80%;width: 95%" >
+          <article class="box" >
+            <header>
+              <h2>Check your symptoms</h2>
+            </header>
+            <!-- <div class="content container-fluid">
+              <div class="row">
+              <div class="col-sm-6 col-md-6 col-lg-6" style="min-width: 100%"></div>
+              <div class="col-lg-7 col-sm-7 col-md-7"></div>
+              </div>
+ -->
+
+
+
+
+
+
+
+
+<div class="container-fluid">
+<div class="row">
+    <div class="col-6"><form>
+
+
+                            <div class="col-sm-10 col-md-10 col-lg-10" >
+                                                   <div class="form-group col-md-7">
+
+      <select id="age" class="form-control">
+        <option selected>----------Select age----------</option>
+        <option value="1">newborn 0-28 d</option>
+<option value="2">infant 29 d-1 yr</option>
+<option value="3">younger child 1-5 yrs</option>
+<option value="10">older child 6-12 yrs </option>
+<option value="4">adolescent 13-16 yrs</option>
+<option value="7">young adult 17-29 yrs</option>
+<option value="5">adult 30-39 yrs</option>
+<option value="8">adult 40-49 yrs</option>
+<option value="9">adult 50-64 yrs</option>
+<option value="6">senior 65 yrs-over</option>
+      </select>
+    </div>
+
+
+     <div class="form-group col-md-7">
+
+<select id="state" class="form-control">
+<option value="">--------Select region--------</option>
+<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+<option value="Andhra Pradesh">Andhra Pradesh</option>
+<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+<option value="Assam">Assam</option>
+<option value="Bihar">Bihar</option>
+<option value="Chandigarh">Chandigarh</option>
+<option value="Chhattisgarh">Chhattisgarh</option>
+<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+<option value="Daman and Diu">Daman and Diu</option>
+<option value="Delhi">Delhi</option>
+<option value="Goa">Goa</option>
+<option value="Gujarat">Gujarat</option>
+<option value="Haryana">Haryana</option>
+<option value="Himachal Pradesh">Himachal Pradesh</option>
+<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+<option value="Jharkhand">Jharkhand</option>
+<option value="Karnataka">Karnataka</option>
+<option value="Kerala">Kerala</option>
+<option value="Lakshadweep">Lakshadweep</option>
+<option value="Madhya Pradesh">Madhya Pradesh</option>
+<option value="Maharashtra">Maharashtra</option>
+<option value="Manipur">Manipur</option>
+<option value="Meghalaya">Meghalaya</option>
+<option value="Mizoram">Mizoram</option>
+<option value="Nagaland">Nagaland</option>
+<option value="Orissa">Orissa</option>
+<option value="Pondicherry">Pondicherry</option>
+<option value="Punjab">Punjab</option>
+<option value="Rajasthan">Rajasthan</option>
+<option value="Sikkim">Sikkim</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+<option value="Tripura">Tripura</option>
+<option value="Uttaranchal">Uttaranchal</option>
+<option value="Uttar Pradesh">Uttar Pradesh</option>
+<option value="West Bengal">West Bengal</option>
+</select>
+
+
+
+    </div>
+
+
+
+
+ <div class="form-group col-md-7 rounded" style="background-color: white; color: black ;     max-width: 52.5%;
+    margin-left: 3%;">
+<hr style="margin-left: 0px">Gender</hr>
+<div class="form-check form-check rounded ">
+
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+  <label class="form-check-label" for="inlineRadio1" style="color: black">Male</label>
+</div>
+<div class="form-check form-check">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+  <label class="form-check-label" for="inlineRadio2" style="color: black">Female</label>
+</div>
+<div class="form-check form-check">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+  <label class="form-check-label" for="inlineRadio3" style="color: black">Transgender</label>
+</div>
+
+
+
+    </div>
+
+
+
+
+
+     <div class="form-group col-md-6 rounded" style="background-color: white ; align-content: center; max-width: 52.5%;
+    margin-left: 3%;">
+
+
+<select id="agesay" class="form-control" style="border: none;"onclick="symptomdropdown()">
+        <option value="">--------Select Symptoms--------</option>
+        <option value="fever">fever</option>
+<option value="cough">cough</option>
+<option value="3">younger child 1-5 yrs</option>
+<option value="10">older child 6-12 yrs </option>
+<option value="4">adolescent 13-16 yrs</option>
+<option value="7">young adult 17-29 yrs</option>
+<option value="5">adult 30-39 yrs</option>
+<option value="8">adult 40-49 yrs</option>
+<option value="9">adult 50-64 yrs</option>
+<option value="6">senior 65 yrs-over</option>
+      </select>
+
+
+      <select id="mySelect" size="4" style="display: width:fit-content;
+                height:fit-content;  ">
+
+  </select>
+</div>
+
+
+<script>
+function symptomdropdown() {
+  var x = document.getElementById("mySelect");
+  var option = document.createElement("option");
+  var symptom=document.getElementById("agesay").value;
+  option.text = symptom;
+  x.add(option);
+}
+</script>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+                           </form></div>
+    <div class="col-10"> <footer style="padding-right: 10%">
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <a href="#" style="max-width: 100%" class="button alt" onclick="buttontoggle()">Diagnose Disease</a>
+      <br>
+      <br>
+      <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <a href="#two"  class="button alt">Check Treatment</a>
+            </footer></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+            </div>
+
+
+          </article>
+        </div>
+        <a href="#two" class="more">check treatment</a>
+      </section>
+
+    <!-- Two -->
+      <section id="two" class="wrapper post bg-img" data-bg="banner5.jpg">
+        <div class="inner">
+          <article class="box">
+            <header style="padding-top: 15%">
+              <br>
+              <h2>Choose Treatment method</h2>
+
+            </header>
+            <div class="content">
+              <div class="accordian">
+    <ul>
+    <li>
+      <div class="image_title">
+        <a href="https://www.youtube.com/channel/UCXTfDJ60DBmA932Du6B1ydg">Ayurveda</a>
+      </div>
+      <a href="https://www.youtube.com/channel/UCXTfDJ60DBmA932Du6B1ydg">
+        <img src="{% static '101.jpg' %}"/>
+      </a>
+    </li>
+    <li>
+      <div class="image_title">
+        <a href="https://www.youtube.com/channel/UCXTfDJ60DBmA932Du6B1ydg">Yoga and Naturopathy</a>
+      </div>
+      <a href="https://www.youtube.com/channel/UCXTfDJ60DBmA932Du6B1ydg">
+        <img src="{% static '201.jpg' %}"/>
+      </a>
+    </li>
+    <li>
+      <div class="image_title">
+        <a href="https://www.youtube.com/channel/UCXTfDJ60DBmA932Du6B1ydg">Unani</a>
+      </div>
+      <a href="https://www.youtube.com/channel/UCXTfDJ60DBmA932Du6B1ydg">
+        <img src="{% static '301.jpg' %}"/>
+      </a>
+    </li>
+    <li>
+      <div class="image_title">
+        <a href="#">Siddha</a>
+      </div>
+      <a href="https://www.youtube.com/channel/UCXTfDJ60DBmA932Du6B1ydg">
+        <img src="{% static '401.jpg' %}"/>
+      </a>
+    </li>
+    <li>
+      <div class="image_title">
+        <a href="#">Homeopathy</a>
+      </div>
+      <a href="https://www.youtube.com/channel/UCXTfDJ60DBmA932Du6B1ydg">
+        <img src="501.png"/>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+            </div>
+            <footer>
+              <a href="generic.html" class="button alt">Learn More</a>
+            </footer>
+          </article>
+        </div>
+        <a href="#three" class="more">Learn More</a>
+      </section>
+
+    <!-- Three -->
+      <section id="three" class="wrapper post bg-img" data-bg="banner4.jpg">
+        <div class="inner">
+          <article class="box">
+            <header>
+              <h2>Varius a cursus aliquet</h2>
+              <p>11.11.2016</p>
+            </header>
+            <div class="content">
+              <p>Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate a duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in tincidunt tristique enim arcu litora scelerisque eros suspendisse.</p>
+            </div>
+            <footer>
+              <a href="generic.html" class="button alt">Learn More</a>
+            </footer>
+          </article>
+        </div>
+        <a href="#four" class="more">Learn More</a>
+      </section>
+
+    <!-- Four -->
+      <section id="four" class="wrapper post bg-img" data-bg="banner3.jpg">
+        <div class="inner">
+          <article class="box">
+            <header>
+              <h2>Luctus blandit mi lectus in nascetur</h2>
+              <p>10.30.2016</p>
+            </header>
+            <div class="content" style="position: fixed">
+              <p>Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate a duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in tincidunt tristique enim arcu litora scelerisque eros suspendisse.</p>
+            </div>
+            <footer>
+              <a href="generic.html" class="button alt">Learn More</a>
+            </footer>
+          </article>
+        </div>
+      </section>
+
+    <!-- Footer -->
+      <footer id="footer">
+        <div class="inner">
+
+          <h3>Contact Us</h3>
+
+          <form action="#" method="post">
+
+            <div class="field half first">
+              <label for="name">Name</label>
+              <input name="name" id="name" type="text" placeholder="Name">
+            </div>
+            <div class="field half">
+              <label for="email">Email</label>
+              <input name="email" id="email" type="email" placeholder="Email">
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+            </div>
+            <ul class="actions">
+              <li><input value="Send Message" class="button alt" type="submit"></li>
+            </ul>
+          </form>
+
+          <ul class="icons">
+            <li><a href="#" class="icon round fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon round fa-facebook"><span class="label">Facebook</span></a></li>
+            <li><a href="#" class="icon round fa-instagram"><span class="label">Instagram</span></a></li>
+          </ul>
+
+          <div class="copyright">
+
+          </div>
+
+        </div>
+      </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="footerest">
+
+<button id="myBtn" onclick="chatbotopen()" class="grow" style="background-color: transparent;"><img src="{% static 'image/bot.gif' %}" style="height:280% ;weight:280%"></button>
+
+                                        <div id="overlay">
+                                  <div id="home_text">
+                                    <a href=""<button  style="background-color: transparent; height: 35%;width: 45%"><img src="{% static 'image/bot123.gif' %}"></button>
+                                      <!-- your image -->
+                                  </div>
+                                  </div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Scripts -->
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/jquery.scrolly.min.js"></script>
+      <script src="assets/js/jquery.scrollex.min.js"></script>
+      <script src="assets/js/skel.min.js"></script>
+      <script src="assets/js/util.js"></script>
+      <script src="assets/js/main.js"></script>
+
+
+
+
+
+
+
+
+
+<!-- code for sticky navbar -->
+
+
+
+
+
+
+
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("headers");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en', includedLanguages: 'bn,en,gu,hi,kn,ml,mr,pa,sd,ta,te',
+  }, 'google_translate_element');
+}
+
+
+
+</script><script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+
+<!-- script for first page effects -->
+
+
+                      <script type="text/javascript">
+                        $(document).ready(function() {
+        var overlay = $('#overlay');
+        overlay.on('click', function (e) {
+            overlay
+                .hide()
+                .off();
+        });
+    });
+                      </script>
+
+
+
+
+
+
+
+  </body>
+</html>
